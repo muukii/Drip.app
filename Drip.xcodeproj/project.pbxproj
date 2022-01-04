@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		4B3EB9922784A2B20048861D /* DripCore in Frameworks */ = {isa = PBXBuildFile; productRef = 4B3EB9912784A2B20048861D /* DripCore */; };
+		4B3F15D92784D02D00EEFE53 /* DripCore in Frameworks */ = {isa = PBXBuildFile; productRef = 4B3F15D82784D02D00EEFE53 /* DripCore */; };
 		4BBE8B6E27847C12007F8051 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBE8B6D27847C12007F8051 /* AppDelegate.swift */; };
 		4BBE8B7727847C13007F8051 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BBE8B7627847C13007F8051 /* Assets.xcassets */; };
 		4BBE8B7A27847C13007F8051 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BBE8B7827847C13007F8051 /* LaunchScreen.storyboard */; };
 		4BBE8B8827847C56007F8051 /* PhotosUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BBE8B8727847C56007F8051 /* PhotosUI.framework */; };
 		4BBE8B8A27847C56007F8051 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BBE8B8927847C56007F8051 /* Photos.framework */; };
-		4BBE8B8D27847C56007F8051 /* PhotoEditingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBE8B8C27847C56007F8051 /* PhotoEditingViewController.swift */; };
-		4BBE8B9027847C56007F8051 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BBE8B8E27847C56007F8051 /* MainInterface.storyboard */; };
+		4BBE8B8D27847C56007F8051 /* ExtensionEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBE8B8C27847C56007F8051 /* ExtensionEditViewController.swift */; };
 		4BBE8B9427847C56007F8051 /* Drip-PhotoEditingExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4BBE8B8527847C56007F8051 /* Drip-PhotoEditingExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
@@ -52,10 +52,9 @@
 		4BBE8B8527847C56007F8051 /* Drip-PhotoEditingExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Drip-PhotoEditingExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BBE8B8727847C56007F8051 /* PhotosUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PhotosUI.framework; path = System/Library/Frameworks/PhotosUI.framework; sourceTree = SDKROOT; };
 		4BBE8B8927847C56007F8051 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
-		4BBE8B8C27847C56007F8051 /* PhotoEditingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoEditingViewController.swift; sourceTree = "<group>"; };
+		4BBE8B8C27847C56007F8051 /* ExtensionEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionEditViewController.swift; sourceTree = "<group>"; };
 		4BBE8B9127847C56007F8051 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4BBE8B9927847C7A007F8051 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		4BBE8B9A27847C7A007F8051 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +71,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4BBE8B8827847C56007F8051 /* PhotosUI.framework in Frameworks */,
+				4B3F15D92784D02D00EEFE53 /* DripCore in Frameworks */,
 				4BBE8B8A27847C56007F8051 /* Photos.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -82,8 +82,8 @@
 		4BBE8B6127847C12007F8051 = {
 			isa = PBXGroup;
 			children = (
-				4B20227E2784C5B900639DD0 /* FluidInterfaceKit */,
 				4B3F14192784B92200DF71EC /* CompositionKit */,
+				4B20227E2784C5B900639DD0 /* FluidInterfaceKit */,
 				4B7D3B9127848B34006B8419 /* Module */,
 				4BBE8B6C27847C12007F8051 /* Drip */,
 				4BBE8B8B27847C56007F8051 /* Drip-PhotoEditingExtension */,
@@ -123,8 +123,7 @@
 		4BBE8B8B27847C56007F8051 /* Drip-PhotoEditingExtension */ = {
 			isa = PBXGroup;
 			children = (
-				4BBE8B8C27847C56007F8051 /* PhotoEditingViewController.swift */,
-				4BBE8B8E27847C56007F8051 /* MainInterface.storyboard */,
+				4BBE8B8C27847C56007F8051 /* ExtensionEditViewController.swift */,
 				4BBE8B9127847C56007F8051 /* Info.plist */,
 			);
 			path = "Drip-PhotoEditingExtension";
@@ -168,6 +167,9 @@
 			dependencies = (
 			);
 			name = "Drip-PhotoEditingExtension";
+			packageProductDependencies = (
+				4B3F15D82784D02D00EEFE53 /* DripCore */,
+			);
 			productName = "Drip-PhotoEditingExtension";
 			productReference = 4BBE8B8527847C56007F8051 /* Drip-PhotoEditingExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
@@ -222,7 +224,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4BBE8B9027847C56007F8051 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,7 +242,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4BBE8B8D27847C56007F8051 /* PhotoEditingViewController.swift in Sources */,
+				4BBE8B8D27847C56007F8051 /* ExtensionEditViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,14 +263,6 @@
 				4BBE8B9927847C7A007F8051 /* en */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		4BBE8B8E27847C56007F8051 /* MainInterface.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4BBE8B9A27847C7A007F8051 /* en */,
-			);
-			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -533,6 +526,10 @@
 
 /* Begin XCSwiftPackageProductDependency section */
 		4B3EB9912784A2B20048861D /* DripCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DripCore;
+		};
+		4B3F15D82784D02D00EEFE53 /* DripCore */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = DripCore;
 		};
