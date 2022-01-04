@@ -4,13 +4,13 @@
 import PackageDescription
 
 let package = Package(
-  name: "Core",
+  name: "DripCore",
   platforms: [.iOS(.v15)],
   products: [
     // Products define the executables and libraries a package produces, and make them visible to other packages.
     .library(
-      name: "Core",
-      targets: ["Core"]
+      name: "DripCore",
+      targets: ["DripCore"]
     )
   ],
   dependencies: [
@@ -25,7 +25,7 @@ let package = Package(
     // Targets are the basic building blocks of a package. A target can define a module or a test suite.
     // Targets can depend on other targets in this package, and on products in packages this package depends on.
     .target(
-      name: "Core",
+      name: "DripCore",
       dependencies: [
         .product(name: "BrightroomEngine", package: "Brightroom"),
         .product(name: "BrightroomUI", package: "Brightroom"),
@@ -38,7 +38,7 @@ let package = Package(
     ),
     .testTarget(
       name: "CoreTests",
-      dependencies: ["Core"]
+      dependencies: ["DripCore"]
     ),
   ]
 )

@@ -15,7 +15,7 @@
         "repositoryURL": "https://github.com/muukii/CompositionKit",
         "state": {
           "branch": "main",
-          "revision": "897146262167a0c46bf0265fca5d57de78172c6e",
+          "revision": "b810e436040b601f7b0c812150d2b591b4c605c7",
           "version": null
         }
       },
@@ -44,6 +44,15 @@
           "branch": null,
           "revision": "4a559b5246c357c112b1231edcc29ed94a979499",
           "version": "1.1.1"
+        }
+      },
+      {
+        "package": "MondrianLayout",
+        "repositoryURL": "https://github.com/muukii/MondrianLayout",
+        "state": {
+          "branch": null,
+          "revision": "239bc0b02b8abbc211720476d1554b736832bb9c",
+          "version": "0.9.0"
         }
       },
       {

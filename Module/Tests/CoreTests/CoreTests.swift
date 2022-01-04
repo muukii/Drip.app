@@ -1,5 +1,5 @@
 import XCTest
-@testable import Core
+@testable import DripCore
 
 final class CoreTests: XCTestCase {
     func testExample() throws {
