@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B7D3B9327848B53006B8419 /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = 4B7D3B9227848B53006B8419 /* Core */; };
 		4BBE8B6E27847C12007F8051 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBE8B6D27847C12007F8051 /* AppDelegate.swift */; };
 		4BBE8B7027847C12007F8051 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBE8B6F27847C12007F8051 /* SceneDelegate.swift */; };
 		4BBE8B7227847C12007F8051 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBE8B7127847C12007F8051 /* ViewController.swift */; };
@@ -44,12 +45,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4B7D3B9127848B34006B8419 /* Module */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Module; sourceTree = "<group>"; };
 		4BBE8B6A27847C12007F8051 /* Drip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Drip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BBE8B6D27847C12007F8051 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4BBE8B6F27847C12007F8051 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		4BBE8B7127847C12007F8051 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4BBE8B7627847C13007F8051 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		4BBE8B7B27847C13007F8051 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4BBE8B8527847C56007F8051 /* Drip-PhotoEditingExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Drip-PhotoEditingExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BBE8B8727847C56007F8051 /* PhotosUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PhotosUI.framework; path = System/Library/Frameworks/PhotosUI.framework; sourceTree = SDKROOT; };
 		4BBE8B8927847C56007F8051 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
@@ -64,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B7D3B9327848B53006B8419 /* Core in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +84,7 @@
 		4BBE8B6127847C12007F8051 = {
 			isa = PBXGroup;
 			children = (
+				4B7D3B9127848B34006B8419 /* Module */,
 				4BBE8B6C27847C12007F8051 /* Drip */,
 				4BBE8B8B27847C56007F8051 /* Drip-PhotoEditingExtension */,
 				4BBE8B8627847C56007F8051 /* Frameworks */,
@@ -103,10 +106,9 @@
 			children = (
 				4BBE8B6D27847C12007F8051 /* AppDelegate.swift */,
 				4BBE8B6F27847C12007F8051 /* SceneDelegate.swift */,
+				4BBE8B7827847C13007F8051 /* LaunchScreen.storyboard */,
 				4BBE8B7127847C12007F8051 /* ViewController.swift */,
 				4BBE8B7627847C13007F8051 /* Assets.xcassets */,
-				4BBE8B7827847C13007F8051 /* LaunchScreen.storyboard */,
-				4BBE8B7B27847C13007F8051 /* Info.plist */,
 			);
 			path = Drip;
 			sourceTree = "<group>";
@@ -148,6 +150,9 @@
 				4BBE8B9327847C56007F8051 /* PBXTargetDependency */,
 			);
 			name = Drip;
+			packageProductDependencies = (
+				4B7D3B9227848B53006B8419 /* Core */,
+			);
 			productName = Drip;
 			productReference = 4BBE8B6A27847C12007F8051 /* Drip.app */;
 			productType = "com.apple.product-type.application";
@@ -529,6 +534,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4B7D3B9227848B53006B8419 /* Core */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Core;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4BBE8B6227847C12007F8051 /* Project object */;
 }

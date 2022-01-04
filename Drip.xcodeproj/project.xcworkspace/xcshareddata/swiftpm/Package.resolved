@@ -1,0 +1,88 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Brightroom",
+        "repositoryURL": "https://github.com/muukii/Brightroom",
+        "state": {
+          "branch": "main",
+          "revision": "046dedc40d4063ac14c10ddd91d1214828b33826",
+          "version": null
+        }
+      },
+      {
+        "package": "CompositionKit",
+        "repositoryURL": "https://github.com/muukii/CompositionKit",
+        "state": {
+          "branch": "main",
+          "revision": "897146262167a0c46bf0265fca5d57de78172c6e",
+          "version": null
+        }
+      },
+      {
+        "package": "FluidInterfaceKit",
+        "repositoryURL": "https://github.com/muukii/FluidInterfaceKit",
+        "state": {
+          "branch": "main",
+          "revision": "8145a865894057f5333b6515499ebabebbbab90d",
+          "version": null
+        }
+      },
+      {
+        "package": "GeometryKit",
+        "repositoryURL": "https://github.com/muukii/GeometryKit",
+        "state": {
+          "branch": null,
+          "revision": "6adb1a9a7ea73f4f14c0879c9be731c8b61235ec",
+          "version": "1.0.0"
+        }
+      },
+      {
+        "package": "MatchedTransition",
+        "repositoryURL": "https://github.com/muukii/MatchedTransition",
+        "state": {
+          "branch": null,
+          "revision": "4a559b5246c357c112b1231edcc29ed94a979499",
+          "version": "1.1.1"
+        }
+      },
+      {
+        "package": "ResultBuilderKit",
+        "repositoryURL": "https://github.com/muukii/ResultBuilderKit",
+        "state": {
+          "branch": "main",
+          "revision": "86c529fd92b2eaaa730b0630a49746108543a930",
+          "version": null
+        }
+      },
+      {
+        "package": "RxSwift",
+        "repositoryURL": "https://github.com/ReactiveX/RxSwift.git",
+        "state": {
+          "branch": null,
+          "revision": "7c17a6ccca06b5c107cfa4284e634562ddaf5951",
+          "version": "6.2.0"
+        }
+      },
+      {
+        "package": "TransitionPatch",
+        "repositoryURL": "https://github.com/muukii/TransitionPatch.git",
+        "state": {
+          "branch": null,
+          "revision": "1f2e5930a68b11dae764ee7ffda14b2b7ffa8fce",
+          "version": "1.0.3"
+        }
+      },
+      {
+        "package": "Verge",
+        "repositoryURL": "https://github.com/VergeGroup/Verge",
+        "state": {
+          "branch": "main",
+          "revision": "4ddceab5a2469aec345984430ea5f8e3b90a5984",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
