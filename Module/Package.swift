@@ -19,6 +19,7 @@ let package = Package(
     .package(url: "https://github.com/muukii/FluidInterfaceKit", branch: "main"),
     .package(url: "https://github.com/muukii/CompositionKit", branch: "main"),
     .package(url: "https://github.com/muukii/ResultBuilderKit", branch: "main"),
+    .package(url: "https://github.com/muukii/TypedTextAttributes", from: "1.3.0"),
     .package(name: "Verge", url: "https://github.com/VergeGroup/Verge", branch: "main"),
   ],
   targets: [
@@ -34,6 +35,7 @@ let package = Package(
         "Verge",
         "ResultBuilderKit",
         "CompositionKit",
+        "TypedTextAttributes",
       ]
     ),
     .testTarget(

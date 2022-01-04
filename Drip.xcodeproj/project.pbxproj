@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		4B3EB9922784A2B20048861D /* DripCore in Frameworks */ = {isa = PBXBuildFile; productRef = 4B3EB9912784A2B20048861D /* DripCore */; };
 		4BBE8B6E27847C12007F8051 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBE8B6D27847C12007F8051 /* AppDelegate.swift */; };
-		4BBE8B7227847C12007F8051 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBE8B7127847C12007F8051 /* ViewController.swift */; };
 		4BBE8B7727847C13007F8051 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BBE8B7627847C13007F8051 /* Assets.xcassets */; };
 		4BBE8B7A27847C13007F8051 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BBE8B7827847C13007F8051 /* LaunchScreen.storyboard */; };
 		4BBE8B8827847C56007F8051 /* PhotosUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BBE8B8727847C56007F8051 /* PhotosUI.framework */; };
@@ -47,7 +46,6 @@
 		4B7D3B9127848B34006B8419 /* Module */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Module; sourceTree = "<group>"; };
 		4BBE8B6A27847C12007F8051 /* Drip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Drip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BBE8B6D27847C12007F8051 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4BBE8B7127847C12007F8051 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4BBE8B7627847C13007F8051 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4BBE8B8527847C56007F8051 /* Drip-PhotoEditingExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Drip-PhotoEditingExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BBE8B8727847C56007F8051 /* PhotosUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PhotosUI.framework; path = System/Library/Frameworks/PhotosUI.framework; sourceTree = SDKROOT; };
@@ -104,7 +102,6 @@
 			children = (
 				4BBE8B6D27847C12007F8051 /* AppDelegate.swift */,
 				4BBE8B7827847C13007F8051 /* LaunchScreen.storyboard */,
-				4BBE8B7127847C12007F8051 /* ViewController.swift */,
 				4BBE8B7627847C13007F8051 /* Assets.xcassets */,
 			);
 			path = Drip;
@@ -232,7 +229,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4BBE8B7227847C12007F8051 /* ViewController.swift in Sources */,
 				4BBE8B6E27847C12007F8051 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
