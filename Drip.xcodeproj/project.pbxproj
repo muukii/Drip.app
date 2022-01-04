@@ -43,6 +43,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4B3F14192784B92200DF71EC /* CompositionKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = CompositionKit; path = submodules/CompositionKit; sourceTree = "<group>"; };
 		4B7D3B9127848B34006B8419 /* Module */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Module; sourceTree = "<group>"; };
 		4BBE8B6A27847C12007F8051 /* Drip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Drip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BBE8B6D27847C12007F8051 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +81,7 @@
 		4BBE8B6127847C12007F8051 = {
 			isa = PBXGroup;
 			children = (
+				4B3F14192784B92200DF71EC /* CompositionKit */,
 				4B7D3B9127848B34006B8419 /* Module */,
 				4BBE8B6C27847C12007F8051 /* Drip */,
 				4BBE8B8B27847C56007F8051 /* Drip-PhotoEditingExtension */,
