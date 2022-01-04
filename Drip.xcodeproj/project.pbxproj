@@ -43,6 +43,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4B20227E2784C5B900639DD0 /* FluidInterfaceKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = FluidInterfaceKit; path = submodules/FluidInterfaceKit; sourceTree = "<group>"; };
 		4B3F14192784B92200DF71EC /* CompositionKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = CompositionKit; path = submodules/CompositionKit; sourceTree = "<group>"; };
 		4B7D3B9127848B34006B8419 /* Module */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Module; sourceTree = "<group>"; };
 		4BBE8B6A27847C12007F8051 /* Drip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Drip.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,6 +82,7 @@
 		4BBE8B6127847C12007F8051 = {
 			isa = PBXGroup;
 			children = (
+				4B20227E2784C5B900639DD0 /* FluidInterfaceKit */,
 				4B3F14192784B92200DF71EC /* CompositionKit */,
 				4B7D3B9127848B34006B8419 /* Module */,
 				4BBE8B6C27847C12007F8051 /* Drip */,
@@ -399,6 +401,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = KU2QEJ9K3Z;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Access to photo library to edit";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -427,6 +430,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = KU2QEJ9K3Z;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Access to photo library to edit";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;

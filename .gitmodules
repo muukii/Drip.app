@@ -1,3 +1,6 @@
 [submodule "submodules/CompositionKit"]
 	path = submodules/CompositionKit
 	url = git@github.com:muukii/CompositionKit.git
+[submodule "submodules/FluidInterfaceKit"]
+	path = submodules/FluidInterfaceKit
+	url = git@github.com:muukii/FluidInterfaceKit.git

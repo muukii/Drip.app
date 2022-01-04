@@ -11,15 +11,6 @@
         }
       },
       {
-        "package": "FluidInterfaceKit",
-        "repositoryURL": "https://github.com/muukii/FluidInterfaceKit",
-        "state": {
-          "branch": "main",
-          "revision": "8145a865894057f5333b6515499ebabebbbab90d",
-          "version": null
-        }
-      },
-      {
         "package": "GeometryKit",
         "repositoryURL": "https://github.com/muukii/GeometryKit",
         "state": {
@@ -38,12 +29,12 @@
         }
       },
       {
-        "package": "ResultBuilderKit",
-        "repositoryURL": "https://github.com/muukii/ResultBuilderKit",
+        "package": "MondrianLayout",
+        "repositoryURL": "https://github.com/muukii/MondrianLayout",
         "state": {
-          "branch": "main",
-          "revision": "86c529fd92b2eaaa730b0630a49746108543a930",
-          "version": null
+          "branch": null,
+          "revision": "239bc0b02b8abbc211720476d1554b736832bb9c",
+          "version": "0.9.0"
         }
       },
       {
@@ -80,6 +71,15 @@
           "branch": "main",
           "revision": "4ddceab5a2469aec345984430ea5f8e3b90a5984",
           "version": null
+        }
+      },
+      {
+        "package": "Wrap",
+        "repositoryURL": "https://github.com/VergeGroup/Wrap",
+        "state": {
+          "branch": null,
+          "revision": "2d2cc9091881b2758e33f97c073039a6237b3275",
+          "version": "3.0.0"
         }
       }
     ]

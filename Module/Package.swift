@@ -21,6 +21,7 @@ let package = Package(
     .package(url: "https://github.com/muukii/ResultBuilderKit", branch: "main"),
     .package(url: "https://github.com/muukii/TypedTextAttributes", from: "1.3.0"),
     .package(name: "Verge", url: "https://github.com/VergeGroup/Verge", branch: "main"),
+    .package(url: "https://github.com/VergeGroup/Wrap", from: "3.0.0"),
   ],
   targets: [
     // Targets are the basic building blocks of a package. A target can define a module or a test suite.
@@ -36,6 +37,7 @@ let package = Package(
         "ResultBuilderKit",
         "CompositionKit",
         "TypedTextAttributes",
+        "Wrap",
       ]
     ),
     .testTarget(
