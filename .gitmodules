@@ -4,3 +4,6 @@
 [submodule "submodules/FluidInterfaceKit"]
 	path = submodules/FluidInterfaceKit
 	url = git@github.com:muukii/FluidInterfaceKit.git
+[submodule "submodules/Brightroom"]
+	path = submodules/Brightroom
+	url = git@github.com:muukii/Brightroom.git
