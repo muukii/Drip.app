@@ -129,16 +129,4 @@ extension EditViewController {
     }
   }
 
-  private static func makeFilterCell(onTap: @escaping () -> Void) -> UIView {
-
-    return InteractiveView(
-      animation: .bodyShrink,
-      haptics: .impactOnTouchUpInside(),
-      useLongPressGesture: false,
-      contentView: AnyView.init { view in
-
-      }
-    )
-
-  }
 }
