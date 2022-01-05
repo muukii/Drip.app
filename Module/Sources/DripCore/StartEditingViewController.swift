@@ -28,7 +28,10 @@ public final class StartEditingViewController: FluidStackViewController, ViewCon
             let fetchResult = PHAsset.fetchAssets(withLocalIdentifiers: [first.assetIdentifier!], options: nil)
             let asset = fetchResult.firstObject!
 
-            let editingStack = EditingStack(imageProvider: .init(asset: asset))
+            let editingStack = EditingStack(
+              imageProvider: .init(asset: asset),
+              colorCubeStorage: .default
+            )
 
             let controller = EditViewController(editingStack: editingStack)
 

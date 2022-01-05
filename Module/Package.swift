@@ -38,8 +38,10 @@ let package = Package(
         "CompositionKit",
         "TypedTextAttributes",
         "Wrap",
+        "AppResource",
       ]
     ),
+    .target(name: "AppResource"),
     .testTarget(
       name: "CoreTests",
       dependencies: ["DripCore"]
