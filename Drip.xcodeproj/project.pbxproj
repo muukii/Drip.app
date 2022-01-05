@@ -75,6 +75,7 @@
 		4BDF14AF2785D36D009E1F3F /* Filters.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Filters.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BDF14B82785D3BB009E1F3F /* LUT_64_Dark_HighContrast_v3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LUT_64_Dark_HighContrast_v3.png; sourceTree = "<group>"; };
 		4BDF14B92785D3BB009E1F3F /* LUT_64_Gloss.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LUT_64_Gloss.png; sourceTree = "<group>"; };
+		4BFEEB4F2785D68E0058FEEA /* Brightroom */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Brightroom; path = submodules/Brightroom; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +110,7 @@
 		4BBE8B6127847C12007F8051 = {
 			isa = PBXGroup;
 			children = (
+				4BFEEB4F2785D68E0058FEEA /* Brightroom */,
 				4B3F14192784B92200DF71EC /* CompositionKit */,
 				4B20227E2784C5B900639DD0 /* FluidInterfaceKit */,
 				4B7D3B9127848B34006B8419 /* Module */,

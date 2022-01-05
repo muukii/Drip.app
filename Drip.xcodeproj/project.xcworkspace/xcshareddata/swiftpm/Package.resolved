@@ -2,15 +2,6 @@
   "object": {
     "pins": [
       {
-        "package": "Brightroom",
-        "repositoryURL": "https://github.com/muukii/Brightroom",
-        "state": {
-          "branch": "main",
-          "revision": "046dedc40d4063ac14c10ddd91d1214828b33826",
-          "version": null
-        }
-      },
-      {
         "package": "GeometryKit",
         "repositoryURL": "https://github.com/muukii/GeometryKit",
         "state": {
@@ -26,15 +17,6 @@
           "branch": null,
           "revision": "4a559b5246c357c112b1231edcc29ed94a979499",
           "version": "1.1.1"
-        }
-      },
-      {
-        "package": "ResultBuilderKit",
-        "repositoryURL": "https://github.com/muukii/ResultBuilderKit",
-        "state": {
-          "branch": "main",
-          "revision": "86c529fd92b2eaaa730b0630a49746108543a930",
-          "version": null
         }
       },
       {
@@ -69,7 +51,7 @@
         "repositoryURL": "https://github.com/VergeGroup/Verge",
         "state": {
           "branch": "main",
-          "revision": "4ddceab5a2469aec345984430ea5f8e3b90a5984",
+          "revision": "fd470f3189c52f851553caf13b8b1dd6795207bc",
           "version": null
         }
       },
