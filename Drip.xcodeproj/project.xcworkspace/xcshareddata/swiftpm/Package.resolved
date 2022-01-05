@@ -29,6 +29,24 @@
         }
       },
       {
+        "package": "MondrianLayout",
+        "repositoryURL": "https://github.com/muukii/MondrianLayout",
+        "state": {
+          "branch": null,
+          "revision": "239bc0b02b8abbc211720476d1554b736832bb9c",
+          "version": "0.9.0"
+        }
+      },
+      {
+        "package": "ResultBuilderKit",
+        "repositoryURL": "https://github.com/muukii/ResultBuilderKit",
+        "state": {
+          "branch": "main",
+          "revision": "86c529fd92b2eaaa730b0630a49746108543a930",
+          "version": null
+        }
+      },
+      {
         "package": "RxSwift",
         "repositoryURL": "https://github.com/ReactiveX/RxSwift.git",
         "state": {
