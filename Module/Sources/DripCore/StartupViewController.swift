@@ -1,6 +1,7 @@
 import CompositionKit
 import FluidInterfaceKit
 import BrightroomEngine
+import Foundation
 
 public final class StartupViewController: FluidStackViewController {
 
@@ -8,7 +9,12 @@ public final class StartupViewController: FluidStackViewController {
     super.viewDidLoad()
 
     do {
-      ColorCubeStorage.default.filters = try ColorCubeLoader(bundle: .main).load()
+
+      let bundle = Bundle.main
+        .path(forResource: "Filters", ofType: "bundle")
+        .map { Bundle(path: $0)! }!
+
+      ColorCubeStorage.default.filters = try ColorCubeLoader(bundle: bundle).load()
     } catch {
       assertionFailure("Failed to load")
     }

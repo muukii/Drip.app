@@ -15,6 +15,8 @@ final class EditViewController: CodeBasedViewController, ViewControllerFluidCont
 
     self.previewImageView = .init(editingStack: editingStack)
 
+    editingStack.state.loadedState?.previewFilterPresets
+
     super.init()
   }
 
