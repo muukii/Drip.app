@@ -10,10 +10,12 @@ import Photos
 import PhotosUI
 import MondrianLayout
 import Wrap
+import BrightroomEngine
 
-open class ExtensionEditViewController: UIViewController, PHContentEditingController {
+open class InExtensionEditingContainerViewController: UIViewController, PHContentEditingController {
 
   public var input: PHContentEditingInput?
+  private var editingStack: EditingStack?
 
   public override func viewDidLoad() {
     super.viewDidLoad()
@@ -45,26 +47,44 @@ open class ExtensionEditViewController: UIViewController, PHContentEditingContro
     // If you returned true from canHandleAdjustmentData:, contentEditingInput has the original image and adjustment data.
     // If you returned false, the contentEditingInput has past edits "baked in".
     input = contentEditingInput
+
+    Task {
+
+      loadPresets()
+
+      let stack = EditingStack(imageProvider: .init(editableRemoteURL: contentEditingInput.fullSizeImageURL!))
+      self.editingStack = stack
+
+      await MainActor.run {
+
+        let controller = EditorViewController(editingStack: stack)
+
+        addChild(controller)
+        view.addSubview(controller.view)
+        controller.view.frame = view.bounds
+        controller.didMove(toParent: self)
+      }
+
+    }
+
   }
 
   public func finishContentEditing(completionHandler: @escaping ((PHContentEditingOutput?) -> Void)) {
     // Update UI to reflect that editing has finished and output is being rendered.
 
-    // Render and provide output on a background queue.
-    DispatchQueue.global().async {
-      // Create editing output from the editing input.
-      let output = PHContentEditingOutput(contentEditingInput: self.input!)
-
-      // Provide new adjustments and render output to given location.
-      // output.adjustmentData = <#new adjustment data#>
-      // let renderedJPEGData = <#output JPEG#>
-      // renderedJPEGData.writeToURL(output.renderedContentURL, atomically: true)
-
-      // Call completion handler to commit edit to Photos.
-      completionHandler(output)
-
-      // Clean up temporary files, etc.
+    guard let editingStack = editingStack else {
+      preconditionFailure()
     }
+
+    Task.detached { [input] in
+
+      let output = PHContentEditingOutput(contentEditingInput: input!)
+
+      try! updateEditingOutput(editingStack: editingStack, output: output)
+
+      completionHandler(output)
+    }
+
   }
 
   public var shouldShowCancelConfirmation: Bool {

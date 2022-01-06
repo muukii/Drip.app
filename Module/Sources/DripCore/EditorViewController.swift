@@ -6,7 +6,7 @@ import MondrianLayout
 import UIKit
 import Verge
 
-final class EditViewController: CodeBasedViewController, ViewControllerFluidContentType {
+final class EditorViewController: CodeBasedViewController {
 
   private let previewImageView: ImagePreviewView
   private let presetSelectionView: DynamicContentListView<PreviewFilterPreset>
@@ -100,7 +100,7 @@ final class EditViewController: CodeBasedViewController, ViewControllerFluidCont
 
 }
 
-extension EditViewController {
+extension EditorViewController {
 
   private final class PresetCell: UICollectionViewCell {
 

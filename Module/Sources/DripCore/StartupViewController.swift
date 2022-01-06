@@ -6,6 +6,17 @@ import Foundation
 import Photos
 import UIKit
 
+func loadPresets() {
+  do {
+    let bundle = Bundle.main
+      .path(forResource: "Filters", ofType: "bundle")
+      .map { Bundle(path: $0)! }!
+    ColorCubeStorage.default.filters = try ColorCubeLoader(bundle: bundle).load()
+  } catch {
+    assertionFailure("\(error)")
+  }
+}
+
 public final class StartupViewController: FluidStackViewController {
 
   public override func viewDidLoad() {
@@ -19,15 +30,7 @@ public final class StartupViewController: FluidStackViewController {
           await self.setupPermissionToAccess()
         }
         group.addTask {
-          do {
-            let bundle = Bundle.main
-              .path(forResource: "Filters", ofType: "bundle")
-              .map { Bundle(path: $0)! }!
-            ColorCubeStorage.default.filters = try ColorCubeLoader(bundle: bundle).load()
-          } catch {
-            assertionFailure("Failed to load")
-          }
-
+          loadPresets()
         }
       }
 

@@ -33,7 +33,10 @@ public final class StartEditingViewController: FluidStackViewController, ViewCon
               colorCubeStorage: .default
             )
 
-            let controller = EditViewController(editingStack: editingStack)
+            let controller = InAppEditingContainerViewController(
+              asset: asset,
+              editingStack: editingStack
+            )
 
             addContentViewController(controller, transition: .popup())
 

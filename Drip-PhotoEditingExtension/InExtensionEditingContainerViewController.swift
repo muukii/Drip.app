@@ -10,6 +10,6 @@ import Photos
 import PhotosUI
 import DripCore
 
-final class PrimaryViewController: ExtensionEditViewController {
+final class PrimaryViewController: InExtensionEditingContainerViewController {
 
 }
