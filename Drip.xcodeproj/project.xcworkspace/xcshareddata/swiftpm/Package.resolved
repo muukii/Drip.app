@@ -21,7 +21,7 @@
       },
       {
         "package": "MondrianLayout",
-        "repositoryURL": "https://github.com/muukii/MondrianLayout",
+        "repositoryURL": "https://github.com/muukii/MondrianLayout.git",
         "state": {
           "branch": null,
           "revision": "239bc0b02b8abbc211720476d1554b736832bb9c",

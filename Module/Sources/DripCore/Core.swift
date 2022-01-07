@@ -17,11 +17,8 @@ func updateEditingOutput(editingStack: EditingStack, output: PHContentEditingOut
   let encoder = JSONEncoder()
   let data = try encoder.encode(state)
 
-  output.adjustmentData = .init(
-    formatIdentifier: "app.muukii.Drip",
-    formatVersion: "1",
-    data: data
-  )
+  output.adjustmentData = .make(data: data)
+  
   try! imageData.write(to: output.renderedContentURL, options: [.atomic])
 
 }

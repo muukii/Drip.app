@@ -39,7 +39,7 @@ open class InExtensionEditingContainerViewController: UIViewController, PHConten
   public func canHandle(_ adjustmentData: PHAdjustmentData) -> Bool {
     // Inspect the adjustmentData to determine whether your extension can work with past edits.
     // (Typically, you use its formatIdentifier and formatVersion properties to do this.)
-    return false
+    return adjustmentData.canHandleInApp()
   }
 
   public func startContentEditing(with contentEditingInput: PHContentEditingInput, placeholderImage: UIImage) {
@@ -52,7 +52,7 @@ open class InExtensionEditingContainerViewController: UIViewController, PHConten
 
       loadPresets()
 
-      let stack = EditingStack(imageProvider: .init(editableRemoteURL: contentEditingInput.fullSizeImageURL!))
+      let stack = EditingStack(imageProvider: .init(contentEditingInput: contentEditingInput)!)
       self.editingStack = stack
 
       await MainActor.run {
