@@ -19,13 +19,16 @@ final class InAppEditingContainerViewController: CodeBasedViewController,
 {
 
   private let contentViewController: EditorViewController
+  private let input: PHContentEditingInput
   private let asset: PHAsset
   private let editingStack: EditingStack
 
   init(
     asset: PHAsset,
+    input: PHContentEditingInput,
     editingStack: EditingStack
   ) {
+    self.input = input
     self.asset = asset
     self.editingStack = editingStack
     self.contentViewController = EditorViewController(editingStack: editingStack)
@@ -72,29 +75,22 @@ final class InAppEditingContainerViewController: CodeBasedViewController,
 
         options.isNetworkAccessAllowed = true
 
-        asset.requestContentEditingInput(with: options) { [weak self] input, userInfo in
+        PHPhotoLibrary.shared().performChanges {
 
-          guard let self = self else { return }
+          do {
+            let request = PHAssetChangeRequest(for: asset)
+            let output = PHContentEditingOutput(contentEditingInput: input)
 
-          PHPhotoLibrary.shared().performChanges {
+            try updateEditingOutput(editingStack: self.editingStack, output: output)
 
-            do {
+            request.contentEditingOutput = output
 
-              let request = PHAssetChangeRequest(for: asset)
-              let output = PHContentEditingOutput(contentEditingInput: input!)
-
-              try updateEditingOutput(editingStack: self.editingStack, output: output)
-
-              request.contentEditingOutput = output
-
-            } catch {
-              assertionFailure("\(error)")
-            }
-
-          } completionHandler: { success, error in
-            print(success, error?.localizedDescription)
+          } catch {
+            assertionFailure("\(error)")
           }
 
+        } completionHandler: { success, error in
+          print(success, error?.localizedDescription)
         }
 
       }

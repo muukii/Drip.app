@@ -28,13 +28,27 @@ public final class StartEditingViewController: FluidStackViewController, ViewCon
             let fetchResult = PHAsset.fetchAssets(withLocalIdentifiers: [first.assetIdentifier!], options: nil)
             let asset = fetchResult.firstObject!
 
+            let input: PHContentEditingInput? = await withCheckedContinuation { continuation in
+
+              let options = PHContentEditingInputRequestOptions()
+              options.isNetworkAccessAllowed = true
+              options.canHandleAdjustmentData = { adjustmentData in
+                adjustmentData.canHandleInApp()
+              }
+
+              asset.requestContentEditingInput(with: options) { input, info in
+                continuation.resume(returning: input)
+              }
+            }
+
             let editingStack = EditingStack(
-              imageProvider: .init(asset: asset),
+              imageProvider: .init(contentEditingInput: input!)!,
               colorCubeStorage: .default
             )
 
             let controller = InAppEditingContainerViewController(
               asset: asset,
+              input: input!,
               editingStack: editingStack
             )
 
