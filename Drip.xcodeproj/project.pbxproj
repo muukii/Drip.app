@@ -10,6 +10,7 @@
 		4B183C192787674200B625B5 /* Filters.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4BDF14AF2785D36D009E1F3F /* Filters.bundle */; };
 		4B3EB9922784A2B20048861D /* DripCore in Frameworks */ = {isa = PBXBuildFile; productRef = 4B3EB9912784A2B20048861D /* DripCore */; };
 		4B3F15D92784D02D00EEFE53 /* DripCore in Frameworks */ = {isa = PBXBuildFile; productRef = 4B3F15D82784D02D00EEFE53 /* DripCore */; };
+		4B429B562788ADB500BDD57D /* presets.json in Resources */ = {isa = PBXBuildFile; fileRef = 4B429B552788ADB500BDD57D /* presets.json */; };
 		4BBE8B6E27847C12007F8051 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBE8B6D27847C12007F8051 /* AppDelegate.swift */; };
 		4BBE8B7727847C13007F8051 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BBE8B7627847C13007F8051 /* Assets.xcassets */; };
 		4BBE8B7A27847C13007F8051 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BBE8B7827847C13007F8051 /* LaunchScreen.storyboard */; };
@@ -17,8 +18,8 @@
 		4BBE8B8A27847C56007F8051 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BBE8B8927847C56007F8051 /* Photos.framework */; };
 		4BBE8B8D27847C56007F8051 /* InExtensionEditingContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBE8B8C27847C56007F8051 /* InExtensionEditingContainerViewController.swift */; };
 		4BBE8B9427847C56007F8051 /* Drip-PhotoEditingExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4BBE8B8527847C56007F8051 /* Drip-PhotoEditingExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		4BDF14BA2785D3BB009E1F3F /* LUT_64_Dark_HighContrast_v3.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BDF14B82785D3BB009E1F3F /* LUT_64_Dark_HighContrast_v3.png */; };
-		4BDF14BB2785D3BB009E1F3F /* LUT_64_Gloss.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BDF14B92785D3BB009E1F3F /* LUT_64_Gloss.png */; };
+		4BDF14BA2785D3BB009E1F3F /* americano_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BDF14B82785D3BB009E1F3F /* americano_1.png */; };
+		4BDF14BB2785D3BB009E1F3F /* latte_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BDF14B92785D3BB009E1F3F /* latte_1.png */; };
 		4BDF14BC2785D3CC009E1F3F /* Filters.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4BDF14AF2785D36D009E1F3F /* Filters.bundle */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +64,7 @@
 /* Begin PBXFileReference section */
 		4B20227E2784C5B900639DD0 /* FluidInterfaceKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = FluidInterfaceKit; path = submodules/FluidInterfaceKit; sourceTree = "<group>"; };
 		4B3F14192784B92200DF71EC /* CompositionKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = CompositionKit; path = submodules/CompositionKit; sourceTree = "<group>"; };
+		4B429B552788ADB500BDD57D /* presets.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = presets.json; sourceTree = "<group>"; };
 		4B7D3B9127848B34006B8419 /* Module */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Module; sourceTree = "<group>"; };
 		4BBE8B6A27847C12007F8051 /* Drip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Drip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BBE8B6D27847C12007F8051 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -74,8 +76,8 @@
 		4BBE8B9127847C56007F8051 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4BBE8B9927847C7A007F8051 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4BDF14AF2785D36D009E1F3F /* Filters.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Filters.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		4BDF14B82785D3BB009E1F3F /* LUT_64_Dark_HighContrast_v3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LUT_64_Dark_HighContrast_v3.png; sourceTree = "<group>"; };
-		4BDF14B92785D3BB009E1F3F /* LUT_64_Gloss.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LUT_64_Gloss.png; sourceTree = "<group>"; };
+		4BDF14B82785D3BB009E1F3F /* americano_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = americano_1.png; sourceTree = "<group>"; };
+		4BDF14B92785D3BB009E1F3F /* latte_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = latte_1.png; sourceTree = "<group>"; };
 		4BFEEB4F2785D68E0058FEEA /* Brightroom */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Brightroom; path = submodules/Brightroom; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -164,8 +166,9 @@
 		4BDF14B72785D3AB009E1F3F /* Filters */ = {
 			isa = PBXGroup;
 			children = (
-				4BDF14B82785D3BB009E1F3F /* LUT_64_Dark_HighContrast_v3.png */,
-				4BDF14B92785D3BB009E1F3F /* LUT_64_Gloss.png */,
+				4BDF14B92785D3BB009E1F3F /* latte_1.png */,
+				4BDF14B82785D3BB009E1F3F /* americano_1.png */,
+				4B429B552788ADB500BDD57D /* presets.json */,
 			);
 			path = Filters;
 			sourceTree = "<group>";
@@ -297,8 +300,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4BDF14BB2785D3BB009E1F3F /* LUT_64_Gloss.png in Resources */,
-				4BDF14BA2785D3BB009E1F3F /* LUT_64_Dark_HighContrast_v3.png in Resources */,
+				4BDF14BB2785D3BB009E1F3F /* latte_1.png in Resources */,
+				4BDF14BA2785D3BB009E1F3F /* americano_1.png in Resources */,
+				4B429B562788ADB500BDD57D /* presets.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

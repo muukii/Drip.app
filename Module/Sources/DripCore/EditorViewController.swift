@@ -66,13 +66,16 @@ final class EditorViewController: CodeBasedViewController {
       },
       didSelectItemAt: { [unowned self] preset in
 
+        UIImpactFeedbackGenerator(style: .light).impactOccurred()
+
         editingStack.set {
           $0.preset = preset.filter
         }
 
-        print(preset)
       }
     )
+
+    presetSelectionView.setContentInset(.init(top: 0, left: 8, bottom: 0, right: 8))
 
     editingStack.sinkState { [weak self] state in
 
@@ -104,18 +107,34 @@ extension EditorViewController {
 
   private final class PresetCell: UICollectionViewCell {
 
+    private let imageView = MetalImageView()
+    private let colorMarkView = UIView()
+
     override init(
       frame: CGRect
     ) {
       super.init(frame: frame)
 
       Mondrian.buildSubviews(on: self) {
-        ZStackBlock {
-          UILabel()&>.do {
-            $0.text = "Hey"
-          }
+        VStackBlock {
+
+          imageView
+            .viewBlock
+            .width(44)
+            .aspectRatio(1)
+
+          colorMarkView
+            .viewBlock
+            .width(16)
+            .height(16)
+            .spacingBefore(4)
+
+          StackingSpacer(minLength: 0)
         }
       }
+
+      colorMarkView.layer.cornerCurve = .continuous
+      colorMarkView.layer.cornerRadius = 8
     }
 
     required init?(
@@ -125,6 +144,14 @@ extension EditorViewController {
     }
 
     func setData(_ data: PreviewFilterPreset) {
+
+      if let info = data.filter.userInfo["info"] as? PresetEmbeddedInfo {
+        colorMarkView.backgroundColor = info.color
+      } else {
+        assertionFailure("")
+      }
+
+      imageView.display(image: data.image)
 
     }
   }

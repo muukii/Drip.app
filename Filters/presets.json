@@ -1,0 +1,26 @@
+{
+  "groups" : [
+    {
+      "id": "americano",
+      "keyColorHex": "#765D95",
+      "name": "Americano",
+      "presets": [
+        {
+          "id": "1",
+          "name": "1"
+        }
+      ]
+    },
+    {
+      "id": "latte",
+      "keyColorHex": "#E38A38",
+      "name": "Latte",
+      "presets": [
+        {
+          "id": "1",
+          "name": "1"
+        }
+      ]
+    }
+  ]
+}

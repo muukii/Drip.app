@@ -6,12 +6,81 @@ import Foundation
 import Photos
 import UIKit
 
+struct PresetEmbeddedInfo: Hashable {
+
+  let color: UIColor
+}
+
 func loadPresets() {
+
+  struct PresetCatalog: Decodable {
+
+    struct Preset: Decodable {
+      let id: String
+      let name: String
+    }
+
+    struct Group: Decodable {
+      let id: String
+      let keyColorHex: String
+      let name: String
+      let presets: [Preset]
+    }
+
+    let groups: [Group]
+
+  }
+
   do {
     let bundle = Bundle.main
       .path(forResource: "Filters", ofType: "bundle")
       .map { Bundle(path: $0)! }!
-    ColorCubeStorage.default.filters = try ColorCubeLoader(bundle: bundle).load()
+
+    let decoder = JSONDecoder()
+
+    let jsonData = bundle.path(forResource: "presets", ofType: "json")
+      .flatMap {
+        try? Data(contentsOf: URL(fileURLWithPath: $0))
+      }!
+
+    let catalog = try decoder.decode(PresetCatalog.self, from: jsonData)
+
+    var presets: [FilterPreset] = []
+
+    for group in catalog.groups {
+
+      for preset in group.presets {
+
+        let lutPath = bundle.path(forResource: "\(group.id)_\(preset.id)", ofType: "png")!
+
+        let dataProvider = CGDataProvider(url: URL(fileURLWithPath: lutPath) as CFURL)!
+        let imageSource = CGImageSourceCreateWithDataProvider(dataProvider, nil)!
+
+        let filter = FilterColorCube(
+          name: "\(group.id).\(preset.id)",
+          identifier: "\(group.id).\(preset.id)",
+          lutImage: .init(cgImageSource: imageSource),
+          dimension: 64
+        )
+
+        let preset = FilterPreset(
+          name: "\(group.id).\(preset.id)",
+          identifier: "\(group.id).\(preset.id)",
+          filters: [filter.asAny()],
+          userInfo: [
+            "info": PresetEmbeddedInfo(
+              color: .init(hexP3: group.keyColorHex, _unused_colorLiteral: nil)
+            )
+          ]
+        )
+
+        presets.append(preset)
+
+      }
+
+    }
+
+    PresetStorage.default.presets = presets
   } catch {
     assertionFailure("\(error)")
   }
@@ -38,7 +107,11 @@ public final class StartupViewController: FluidStackViewController {
 
     }
 
-    let token = NotificationCenter.default.addObserver(forName: UIApplication.willEnterForegroundNotification, object: nil, queue: nil) { [weak self] _ in
+    let token = NotificationCenter.default.addObserver(
+      forName: UIApplication.willEnterForegroundNotification,
+      object: nil,
+      queue: nil
+    ) { [weak self] _ in
 
       guard let self = self else { return }
 
@@ -84,8 +157,11 @@ public final class StartupViewController: FluidStackViewController {
     case .limited:
 
       let alert = UIAlertController.init(
-        title: Strings(ja: "全ての写真へのアクセスを許可してください", en: "You need to give this app access to all photos")
-          .string(),
+        title: Strings(
+          ja: "全ての写真へのアクセスを許可してください",
+          en: "You need to give this app access to all photos"
+        )
+        .string(),
         message: Strings(ja: "", en: "").string(),
         preferredStyle: .alert
       )

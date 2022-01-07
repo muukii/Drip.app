@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // Override point for customization after application launch.
 
     let newWindow = UIWindow()
+    newWindow.tintColor = .secondaryLabel
     newWindow.rootViewController = StartupViewController()
     newWindow.makeKeyAndVisible()
     self.window = newWindow
