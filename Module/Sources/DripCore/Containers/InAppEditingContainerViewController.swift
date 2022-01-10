@@ -18,6 +18,13 @@ final class InAppEditingContainerViewController: CodeBasedViewController,
   ViewControllerFluidContentType
 {
 
+  enum Action {
+    case didCancel
+    case didComplete
+  }
+
+  var actionHandler: (InAppEditingContainerViewController, Action) -> Void = { _, _ in assertionFailure() }
+
   private let contentViewController: EditorViewController
   private let input: PHContentEditingInput
   private let asset: PHAsset
@@ -33,6 +40,7 @@ final class InAppEditingContainerViewController: CodeBasedViewController,
     self.editingStack = editingStack
     self.contentViewController = EditorViewController(editingStack: editingStack)
     super.init()
+    definesPresentationContext = true
   }
 
   override func viewDidLoad() {
@@ -54,26 +62,13 @@ final class InAppEditingContainerViewController: CodeBasedViewController,
     let cancelButton = UIButton(
       configuration: .plain(),
       primaryAction: .init(title: Strings(ja: "キャンセル", en: "Cancel").string()) { [unowned self] _ in
-        fluidStackViewControllerContext?.removeSelf(transition: .vanishing())
+        actionHandler(self, .didCancel)
       }
     )
 
     let doneButton = UIButton(
       configuration: .plain(),
       primaryAction: .init(title: Strings(ja: "完了", en: "Done").string()) { [unowned self] _ in
-
-        let options = PHContentEditingInputRequestOptions()
-
-        options.progressHandler = { progress, stop in
-          print("Processing", progress, stop)
-        }
-
-        options.canHandleAdjustmentData = { data in
-          print(data)
-          return true
-        }
-
-        options.isNetworkAccessAllowed = true
 
         PHPhotoLibrary.shared().performChanges {
 
@@ -90,9 +85,23 @@ final class InAppEditingContainerViewController: CodeBasedViewController,
           }
 
         } completionHandler: { success, error in
-          print(success, error?.localizedDescription)
-        }
+         
+          Task { @MainActor in
 
+            if success {
+              actionHandler(self, .didComplete)
+            } else {
+
+              let alert = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
+              alert.addAction(.init(title: "OK", style: .default, handler: nil))
+              alert.modalPresentationStyle = .currentContext
+              present(alert, animated: true, completion: nil)
+
+            }
+
+          }
+
+        }
       }
     )
 
