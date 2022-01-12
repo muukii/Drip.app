@@ -2,12 +2,48 @@
   "object": {
     "pins": [
       {
+        "package": "Brightroom",
+        "repositoryURL": "https://github.com/muukii/Brightroom",
+        "state": {
+          "branch": "main",
+          "revision": "a9842667f89439af5e3c075ed5e580299c756569",
+          "version": null
+        }
+      },
+      {
+        "package": "CompositionKit",
+        "repositoryURL": "https://github.com/muukii/CompositionKit",
+        "state": {
+          "branch": "main",
+          "revision": "3633526df7edab5b31740304592cf2b2336639d2",
+          "version": null
+        }
+      },
+      {
+        "package": "Descriptors",
+        "repositoryURL": "https://github.com/muukii/Descriptors.git",
+        "state": {
+          "branch": null,
+          "revision": "b93f250d6e4007d512da77b1138acd03c11d4550",
+          "version": "0.1.0"
+        }
+      },
+      {
         "package": "EmbeddedStringsKit",
         "repositoryURL": "https://github.com/muukii/EmbeddedStringsKit",
         "state": {
           "branch": null,
           "revision": "06b8cbcc66a8935c539ff42f8fcee04719ae307d",
           "version": "0.1.0"
+        }
+      },
+      {
+        "package": "FluidInterfaceKit",
+        "repositoryURL": "https://github.com/muukii/FluidInterfaceKit",
+        "state": {
+          "branch": "main",
+          "revision": "ae83ed28f79c187fcafd66b5aabd5188c5e38e13",
+          "version": null
         }
       },
       {
@@ -26,15 +62,6 @@
           "branch": null,
           "revision": "4a559b5246c357c112b1231edcc29ed94a979499",
           "version": "1.1.1"
-        }
-      },
-      {
-        "package": "MondrianLayout",
-        "repositoryURL": "https://github.com/muukii/MondrianLayout",
-        "state": {
-          "branch": null,
-          "revision": "239bc0b02b8abbc211720476d1554b736832bb9c",
-          "version": "0.9.0"
         }
       },
       {

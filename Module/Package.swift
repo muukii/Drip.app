@@ -20,6 +20,7 @@ let package = Package(
     .package(url: "https://github.com/muukii/CompositionKit", branch: "main"),
     .package(url: "https://github.com/muukii/ResultBuilderKit", branch: "main"),
     .package(url: "https://github.com/muukii/TypedTextAttributes", from: "1.3.0"),
+    .package(url: "https://github.com/muukii/EmbeddedStringsKit", from: "0.1.0"),
     .package(name: "Verge", url: "https://github.com/VergeGroup/Verge", branch: "main"),
     .package(url: "https://github.com/VergeGroup/Wrap", from: "3.0.0"),
   ],
@@ -36,13 +37,16 @@ let package = Package(
         "Verge",
         "ResultBuilderKit",
         .product(name: "CompositionKit", package: "CompositionKit"),
-        .product(name: "CompositionKitVerge", package: "CompositionKit"),      
+        .product(name: "CompositionKitVerge", package: "CompositionKit"),
         "TypedTextAttributes",
         "Wrap",
         "AppResource",
       ]
     ),
-    .target(name: "AppResource"),
+    .target(
+      name: "AppResource",
+      dependencies: ["EmbeddedStringsKit"]
+    ),
     .testTarget(
       name: "CoreTests",
       dependencies: ["DripCore"]
