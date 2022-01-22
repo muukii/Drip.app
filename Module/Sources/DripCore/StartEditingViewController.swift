@@ -6,9 +6,7 @@ import MondrianLayout
 import PhotosUI
 import UIKit
 
-public final class StartEditingViewController: FluidStackViewController,
-  ViewControllerFluidContentType
-{
+public final class StartEditingViewController: FluidStackController {
 
   private var proxy: PickerDelegateProxy?
 
@@ -162,9 +160,9 @@ public final class StartEditingViewController: FluidStackViewController,
     controller.actionHandler = { instance, action in
       switch action {
       case .didCancel:
-        instance.fluidStackViewControllerContext?.removeSelf(transition: .vanishing())
+        instance.fluidStackContext?.removeSelf(transition: .vanishing())
       case .didComplete:
-        instance.fluidStackViewControllerContext?.removeSelf(transition: .vanishing())
+        instance.fluidStackContext?.removeSelf(transition: .vanishing())
       }
     }
 

@@ -14,8 +14,7 @@ import MondrianLayout
 import Photos
 import UIKit
 
-final class InAppEditingContainerViewController: CodeBasedViewController,
-  ViewControllerFluidContentType
+final class InAppEditingContainerViewController: CodeBasedViewController 
 {
 
   enum Action {

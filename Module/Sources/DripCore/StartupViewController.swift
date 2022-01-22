@@ -86,7 +86,7 @@ func loadPresets() {
   }
 }
 
-public final class StartupViewController: FluidStackViewController {
+public final class StartupViewController: FluidStackController {
 
   public override func viewDidLoad() {
     super.viewDidLoad()
