@@ -29,12 +29,21 @@
         }
       },
       {
-        "package": "ResultBuilderKit",
-        "repositoryURL": "https://github.com/muukii/ResultBuilderKit",
+        "package": "MondrianLayout",
+        "repositoryURL": "https://github.com/muukii/MondrianLayout.git",
         "state": {
-          "branch": "main",
-          "revision": "86c529fd92b2eaaa730b0630a49746108543a930",
-          "version": null
+          "branch": null,
+          "revision": "239bc0b02b8abbc211720476d1554b736832bb9c",
+          "version": "0.9.0"
+        }
+      },
+      {
+        "package": "Rideau",
+        "repositoryURL": "https://github.com/muukii/Rideau.git",
+        "state": {
+          "branch": null,
+          "revision": "3d63a3f8ef459eb929f25903d51559b170a0b2a6",
+          "version": "2.1.1"
         }
       },
       {
@@ -69,7 +78,7 @@
         "repositoryURL": "https://github.com/VergeGroup/Verge",
         "state": {
           "branch": "main",
-          "revision": "fd470f3189c52f851553caf13b8b1dd6795207bc",
+          "revision": "eaef476f691940b53e22de01abb29eb99d79c072",
           "version": null
         }
       },
