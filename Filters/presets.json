@@ -21,6 +21,28 @@
           "name": "1"
         }
       ]
+    },
+    {
+      "id": "green",
+      "keyColorHex": "#E38A38",
+      "name": "Green",
+      "presets": [
+        {
+          "id": "1",
+          "name": "1"
+        }
+      ]
+    },
+    {
+      "id": "kodak",
+      "keyColorHex": "#E38A38",
+      "name": "Kodak",
+      "presets": [
+        {
+          "id": "1",
+          "name": "1"
+        }
+      ]
     }
   ]
 }
