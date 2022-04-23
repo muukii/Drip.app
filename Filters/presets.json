@@ -43,6 +43,17 @@
           "name": "1"
         }
       ]
+    },
+    {
+      "id": "summer",
+      "keyColorHex": "#E45809",
+      "name": "Summer",
+      "presets": [
+        {
+          "id": "1",
+          "name": "1"
+        }
+      ]
     }
   ]
 }

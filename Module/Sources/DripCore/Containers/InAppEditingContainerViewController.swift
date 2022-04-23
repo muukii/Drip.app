@@ -14,8 +14,7 @@ import MondrianLayout
 import Photos
 import UIKit
 
-final class InAppEditingContainerViewController: CodeBasedViewController 
-{
+final class InAppEditingContainerViewController: FluidViewController {
 
   enum Action {
     case didCancel
@@ -38,7 +37,7 @@ final class InAppEditingContainerViewController: CodeBasedViewController
     self.asset = asset
     self.editingStack = editingStack
     self.contentViewController = EditorViewController(editingStack: editingStack)
-    super.init()
+    super.init(configuration: .init(transition: .empty, topBar: .hidden))
     definesPresentationContext = true
   }
 

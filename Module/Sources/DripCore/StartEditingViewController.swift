@@ -9,6 +9,10 @@ import UIKit
 public final class StartEditingViewController: FluidStackController {
 
   private var proxy: PickerDelegateProxy?
+  
+  public init() {
+    super.init(configuration: .init(retainsRootViewController: false))
+  }
 
   public override func viewDidLoad() {
     super.viewDidLoad()
@@ -160,13 +164,13 @@ public final class StartEditingViewController: FluidStackController {
     controller.actionHandler = { instance, action in
       switch action {
       case .didCancel:
-        instance.fluidStackContext?.removeSelf(transition: .vanishing)
+        instance.fluidPop()
       case .didComplete:
-        instance.fluidStackContext?.removeSelf(transition: .vanishing)
+        instance.fluidPop()
       }
     }
-
-    addContentViewController(controller, transition: .popup())
+    
+    fluidPush(controller, target: .current, relation: .modality)
   }
 
   @MainActor

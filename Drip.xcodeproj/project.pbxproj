@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B0ECF0328142C1300286044 /* summer_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B0ECF0228142C1300286044 /* summer_1.png */; };
+		4B0ECF05281430D000286044 /* RevealServer.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B0ECF04281430C600286044 /* RevealServer.xcframework */; };
+		4B0ECF06281430D000286044 /* RevealServer.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4B0ECF04281430C600286044 /* RevealServer.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4B183C192787674200B625B5 /* Filters.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4BDF14AF2785D36D009E1F3F /* Filters.bundle */; };
 		4B3EB9922784A2B20048861D /* DripCore in Frameworks */ = {isa = PBXBuildFile; productRef = 4B3EB9912784A2B20048861D /* DripCore */; };
 		4B3F15D92784D02D00EEFE53 /* DripCore in Frameworks */ = {isa = PBXBuildFile; productRef = 4B3F15D82784D02D00EEFE53 /* DripCore */; };
@@ -50,6 +53,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		4B0ECF07281430D000286044 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4B0ECF06281430D000286044 /* RevealServer.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4BBE8B9827847C56007F8051 /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -64,6 +78,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4B0ECF0228142C1300286044 /* summer_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = summer_1.png; sourceTree = "<group>"; };
+		4B0ECF04281430C600286044 /* RevealServer.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = RevealServer.xcframework; sourceTree = "<group>"; };
 		4B20227E2784C5B900639DD0 /* FluidInterfaceKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = FluidInterfaceKit; path = submodules/FluidInterfaceKit; sourceTree = "<group>"; };
 		4B3F14192784B92200DF71EC /* CompositionKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = CompositionKit; path = submodules/CompositionKit; sourceTree = "<group>"; };
 		4B429B552788ADB500BDD57D /* presets.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = presets.json; sourceTree = "<group>"; };
@@ -91,6 +107,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B3EB9922784A2B20048861D /* DripCore in Frameworks */,
+				4B0ECF05281430D000286044 /* RevealServer.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,6 +134,7 @@
 		4BBE8B6127847C12007F8051 = {
 			isa = PBXGroup;
 			children = (
+				4B0ECF04281430C600286044 /* RevealServer.xcframework */,
 				4BFEEB4F2785D68E0058FEEA /* Brightroom */,
 				4B3F14192784B92200DF71EC /* CompositionKit */,
 				4B20227E2784C5B900639DD0 /* FluidInterfaceKit */,
@@ -174,6 +192,7 @@
 				4BDF14B82785D3BB009E1F3F /* americano_1.png */,
 				4BC6C08E27A6F5A90056B635 /* green_1.png */,
 				4BC6C08F27A6F5A90056B635 /* kodak_1.png */,
+				4B0ECF0228142C1300286044 /* summer_1.png */,
 				4B429B552788ADB500BDD57D /* presets.json */,
 			);
 			path = Filters;
@@ -190,6 +209,7 @@
 				4BBE8B6727847C12007F8051 /* Frameworks */,
 				4BBE8B6827847C12007F8051 /* Resources */,
 				4BBE8B9827847C56007F8051 /* Embed App Extensions */,
+				4B0ECF07281430D000286044 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -310,6 +330,7 @@
 				4BB17A9327A6F7C300EDE620 /* latte_1.png in Resources */,
 				4BB17A9127A6F7C300EDE620 /* americano_1.png in Resources */,
 				4B429B562788ADB500BDD57D /* presets.json in Resources */,
+				4B0ECF0328142C1300286044 /* summer_1.png in Resources */,
 				4BB17A9027A6F7C300EDE620 /* green_1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
