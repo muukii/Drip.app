@@ -160,9 +160,9 @@ public final class StartEditingViewController: FluidStackController {
     controller.actionHandler = { instance, action in
       switch action {
       case .didCancel:
-        instance.fluidStackContext?.removeSelf(transition: .vanishing())
+        instance.fluidStackContext?.removeSelf(transition: .vanishing)
       case .didComplete:
-        instance.fluidStackContext?.removeSelf(transition: .vanishing())
+        instance.fluidStackContext?.removeSelf(transition: .vanishing)
       }
     }
 

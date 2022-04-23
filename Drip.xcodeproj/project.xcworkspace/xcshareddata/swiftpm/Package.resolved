@@ -2,6 +2,15 @@
   "object": {
     "pins": [
       {
+        "package": "Descriptors",
+        "repositoryURL": "https://github.com/muukii/Descriptors.git",
+        "state": {
+          "branch": null,
+          "revision": "6b4ae4b9a62bc7950cca9325515264412f37411a",
+          "version": "0.2.1"
+        }
+      },
+      {
         "package": "EmbeddedStringsKit",
         "repositoryURL": "https://github.com/muukii/EmbeddedStringsKit",
         "state": {
@@ -35,6 +44,15 @@
           "branch": null,
           "revision": "239bc0b02b8abbc211720476d1554b736832bb9c",
           "version": "0.9.0"
+        }
+      },
+      {
+        "package": "ResultBuilderKit",
+        "repositoryURL": "https://github.com/muukii/ResultBuilderKit",
+        "state": {
+          "branch": "main",
+          "revision": "177f81c4db68b2c833245738829f6567a957b988",
+          "version": null
         }
       },
       {
